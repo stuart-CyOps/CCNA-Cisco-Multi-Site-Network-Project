@@ -1,6 +1,6 @@
 # CCNA Cisco Multi-Site Network Project 🌐
 
-_[topology.png](https://www.google.com/search?q=topology.png)_
+(topology.png)
 
 ## 📖 About The Project
 
