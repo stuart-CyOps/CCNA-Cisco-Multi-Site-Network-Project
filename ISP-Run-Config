@@ -1,0 +1,89 @@
+ISP#sh run
+Building configuration...
+
+Current configuration : 972 bytes
+!
+version 15.4
+no service timestamps log datetime msec
+no service timestamps debug datetime msec
+service password-encryption
+!
+hostname ISP
+!
+!
+!
+enable secret 5 $1$mERr$ZMxEvq5b99JUOBzOrM.d6.
+!
+!
+!
+!
+!
+!
+ip cef
+no ipv6 cef
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+spanning-tree mode pvst
+!
+!
+!
+!
+!
+!
+interface GigabitEthernet0/0/0
+ description Link to HQ-R1
+ ip address 209.165.200.225 255.255.255.252
+ duplex auto
+ speed auto
+!
+interface GigabitEthernet0/0/1
+ ip address 8.8.8.8 255.255.255.0
+ duplex auto
+ speed auto
+!
+interface GigabitEthernet0/0/2
+ no ip address
+ duplex auto
+ speed auto
+ shutdown
+!
+interface Vlan1
+ no ip address
+ shutdown
+!
+ip classless
+ip route 209.165.200.224 255.255.255.252 Null0 
+ip route 209.165.200.224 255.255.255.252 209.165.200.226 
+!
+ip flow-export version 9
+!
+!
+!
+banner motd ^C WARNING!!! AUTHORISED PERSONEL ONLY!!! ^C
+!
+!
+!
+!
+line con 0
+ password 7 0822455D0A16544541
+ login
+!
+line aux 0
+!
+line vty 0 4
+ password 7 0822455D0A16544541
+ login
+!
+!
+!
+end
