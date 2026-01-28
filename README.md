@@ -56,18 +56,17 @@ This lab covers topics from CCNA 1 (ITN), CCNA 2 (SRWE), and CCNA 3 (ENSA):
 *   **GNS3 / EVE-NG** (with appropriate IOS images).
     
 
-### Installation
+### Lab Setup & Installation
 
-1.  Clone this repository:
-    
+This project is designed as a hands-on build exercise. To replicate this network, follow these steps:
 
-    git clone [https://github.com/yourusername/ccna-master-lab.git](https://github.com/yourusername/ccna-master-lab.git)
+1.  Build the Topology: Open Cisco Packet Tracer and manually place the devices (3 Routers, 1 L3 Switch, 1 L2 Switch, and end devices) as described in the documentation.   
     
+2.  Cabling: Connect the devices using the appropriate cable types (Serial for WAN, Copper Straight-through for LAN).
+    
+3.  Manual Configuration: Access the CLI of each device and configure the interfaces, routing protocols (OSPF), and security policies.
 
-2.  Open the topology file (e.g., `.pkt`) in your simulator.
-    
-3.  If starting from scratch, copy the configurations from the `configs/` folder into the CLI of each respective device.
-    
+4.  End-to-End Testing: Once configured, use the verification steps below to ensure the network is functioning as intended.
 
 ## 🧪 Verification & Testing
 
@@ -114,8 +113,6 @@ Run a ping to the internet and check translations on the Edge Router:
     
 
 ## 👤 Author
-
-**Stuart**
 
 *   [LinkedIn](https://www.google.com/search?q=https://www.linkedin.com/in/stuartcybersecurity "null")
     
